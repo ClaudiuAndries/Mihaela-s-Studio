@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mihaela's Studio</title>
+        <link href="https://fonts.cdnfonts.com/css/libre-baskerville" rel="stylesheet">
+        <link rel="shortcut icon" type="x-icon" href="logoPng.png"/>
+        <meta charset="UTF-8">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@200&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="searchbuttons.css">
+        <link rel="stylesheet" href="contact-style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body >
+        <div id="header">
+        </div>
+        <div id="social" style="display:none;"> 
+        </div>
+
+        <div id="content">
+            <div class="Contact-Body">
+                <div class="Contact-Container">
+                    <form action="#">
+                        <div class="Form-Row">
+                            <div class="Input-Data">
+                                <input type="text" id="first_name" required>
+                                
+                                <div class="Underline"></div>
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="Input-Data">
+                                <input type="text" id="second_name" required>
+                                <div class="Underline"></div>
+                                <label for="second_name">Second Name</label>
+                            </div>
+                        </div>
+
+                        <div class="Form-Row">
+                            <div class="Input-Data">
+                                <input type="text" id="email" required>
+                                <div class="Underline"></div>
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                            
+                        <div class="Form-Row textarea">
+                            <div class="Input-Data " >
+                                <textarea id="message" cols="10" rows="30" required></textarea>
+                                <div class="Underline"></div>
+                                <label for="message">Write your massage</label>
+                            </div>
+                        </div>
+                            <div class="Form-Row">
+                                <div class="Input-Data">
+                                    <input class="submit-btn" onclick="PressContact()" type="submit" value="submit">
+                                </div>
+                            </div>  
+                        </div>  
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <p>© Copyright 2023. All Rights Reserved</p>
+        </footer>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script src="script.js">  </script>
+        <script src="searchbuttons.js" defer></script>
+    </body>
+</html>

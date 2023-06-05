@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mihaela's Art</title>
+        <!-- //font -->
+        <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="shortcut icon" type="x-icon" href="../logoPng.png"/>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../social-media.css">
+        <link rel="stylesheet" href="../searchbuttons.css">
+        <link rel="stylesheet" href="product.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header id="header">
+        </header>
+        <div id="social">
+        </div>
+
+        <div class="Product-Container">
+            <div id="Product-Alignment">
+                <figure class="zoom" onmousemove="zoom(event)">
+                    <img id="productImage" src="IconsImage/first.jpg" alt="">
+                  </figure>
+                
+                <div id="Images-Product">
+                </div>
+            </div>
+            <div class="Description">
+                <h3 id="Title">Title</h3 >
+                <p id="DescriptionText">Description</p >
+                <p id="Medium">Mediu</p>
+                <p id="Year">Year</p>
+                <p id="Dimension">Dimension</p>
+                <p id="Price">Price</p>
+                <p id="Availability">Availability</p>
+                <p>SHIPPING</p>
+                <p>Shipping is available to anywhere in the world. Please allow up to 2-4 weeks of time for its arrival. Delivery times will vary depending on your location.</h2>
+            </div>
+
+        </div>
+
+        <footer id="footer">
+            <p>© Copyright 2023. All Rights Reserved</p>
+        </footer>
+        <script src="store.js" defer></script>
+        <script src="product.js" defer></script>
+        <script src="../searchbuttons.js" defer></script>
+        <script>
+           function zoom(e){
+                var zoomer = e.currentTarget;
+                e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+                e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+                x = offsetX/zoomer.offsetWidth*100
+                y = offsetY/zoomer.offsetHeight*100
+                zoomer.style.backgroundPosition = x + '% ' + y + '%';
+            }
+        </script>
+    </body>
+</html>

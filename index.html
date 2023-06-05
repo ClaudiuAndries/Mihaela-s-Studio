@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mihaela's Studio</title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@200&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+
+        
+        <link rel="shortcut icon" type="x-icon" href="logoPng.png"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="social-media.css">
+        <link rel="stylesheet" href="searchbuttons.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+        </div> 
+        
+        <div id="social"> </div>
+        <div class="container">
+            <div class="wrapper">
+                <div class="wrapper-holder">
+                    <div class="slider-img" id="slider-img-1"></div>
+                    <div class="slider-img" id="slider-img-2"></div>
+                    <div class="slider-img" id="slider-img-3"></div>
+                </div>
+                <div class="button-holder">
+                    <a href="#slider-1" class="button"></a>
+                    <a href="#slider-2" class="button"></a>
+                    <a href="#slider-3" class="button"></a>
+                </div>
+            </div>
+            <section class = "Citat-Section">
+                <div class="container reveal fade-bottom">
+                  <div class="text-container">
+                    <div class="text-box">
+                        <h3>
+                            "I belive that beauty is in the eye of the beholder, but it is the artist's duty to offer something worth looking at."" - Elisabeth Louise Vigee Le Brun
+                        </h3>
+                    </div>
+                    
+                    </div>
+                    <div class="Info-Index">
+                        <section>
+                            <h3>Discover the story of the artist. We invite you to explore the "About" section for more insights.</h2>
+                            <button class="submit-btn" onclick="window.location.href='AboutPage.html'">About</button>
+                        </section>
+                        
+                        <section>
+                            <h3>Immerse yourself in the captivating world of art. Visit our "Gallery" section to indulge in visual masterpieces.</h2>
+                            
+                                <button class="submit-btn" onclick="window.location.href='GalleryPage.html'">Gallery</button>
+                        </section>
+                        
+                        <section>
+                            <h3>Explore our exquisite collection of artworks in our "Store" section. Find the perfect piece to adorn your space or discover a unique gift for someone special.</h2>
+                            <button class="submit-btn" onclick="window.location.href='StorePage.html'">Store</button>
+                        </section>
+                  </div>
+                </div>
+              </section>
+        </div>
+        
+        
+
+        <!-- <div id="content" class="Main-Elements">
+            <div class="Main-Images">
+                <img alt= "first image" src="FirstImage.jpeg">
+                <img alt="second image" src="SecondImage.jpeg">
+            </div>
+            <img alt = "main image" src="MainImage.jpeg">
+            <img alt = "citat image"class="Citat-Image" src="citat.png" >
+            
+        </div> -->
+        <footer id="footer">
+            <p>© Copyright 2023. All Rights Reserved</p>
+        </footer>
+
+        <script src="searchbuttons.js" defer></script>
+        <script src="social-media.js" defer></script>
+        <script>
+            function reveal() {
+                var reveals = document.querySelectorAll(".reveal");
+            
+                for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+            
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+                }
+            }
+            
+            window.addEventListener("scroll", reveal);
+        </script>
+    </body>
+</html>

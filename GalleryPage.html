@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mihaela's Art</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="x-icon" href="logoPng.png"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@200&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.cdnfonts.com/css/libre-baskerville" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="gallery-style.css">
+        <link rel="stylesheet" href="social-media.css"/>
+        <link rel="stylesheet" href="searchbuttons.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <header id="header">
+        </header>
+        <div id="social"> </div>
+
+        <div class="Gallery-Container">
+            <div id="Image-Container" >
+            </div> 
+           
+            <div class='Popup-Image'>
+                <span>&times</span>
+                <i id="prev-btn" class="fa fa-angle-left lightbox-prev"></i>
+                <i id="next-btn" class="fa fa-angle-right lightbox-next"></i>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <p>© Copyright 2023. All Rights Reserved</p>
+        </footer>
+        <script src = "gallery.js" defer></script>
+        <script>
+            window.onload = function() {
+	            loadImagesFromFolder('images/gallery');
+            };
+        </script>
+        <script src="searchbuttons.js" defer></script>
+    </body>
+</html>

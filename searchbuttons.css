@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: cover;
+  }
+#header img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav {
+    padding: 10px;
+    background-color: transparent;
+    justify-content: space-between;
+}
+
+li {
+    color: #6f546b;
+}
+nav a {
+    
+    z-index: 1;
+    display: inline-flex;
+    font-family: 'Ysabeau', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    font-size: medium;
+    text-decoration: none;
+    color: #6f546b;
+
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+.Gallery-Button { 
+    position: relative;
+    display: inline-block;
+}
+
+.Gallery-Dropdown {
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    width: 100px;
+    z-index: 1;
+    display: none;
+    background-color: #c790b6;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    opacity: 0.8;
+    z-index: 3;
+    text-align: center;
+    justify-content: center;
+}
+  
+.Gallery-Dropdown a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-size: small;
+    padding: 2px;
+}
+  
+.Gallery-Dropdown a:hover  {
+    text-decoration: underline;
+    transition: .40;
+}
+
+.Gallery-Button:hover .Gallery-Dropdown {
+    display: block;
+}
+
+.TestUl {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto; /* Aliniați meniul pe mijloc */
+    max-width: 770px; /* Lățimea maximă a containerului meniului */
+    padding: 0 20px; /* Adăugați o mică margine la marginile stânga și dreapta ale meniului */
+    z-index: 7;
+  }
+
+  /* Icon menu button */
+
+
+.icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #6f546b;
+    display: none;
+}
+
+.cancel-btn {
+    color: white;
+}
+
+.cancel-btn:hover {
+    color: #b58d07;
+}
+.NavBar {
+    
+    position: absolute;
+    z-index: 3;
+     height: 100vh; 
+    max-width: 400px;
+    left: 0%;
+    width: 400px;
+    position: fixed;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: left;
+    background: #6f546b;
+    transition: all 0.3s ease;
+}
+.NavBar li {
+    list-style: none;
+}
+.NavBar a {
+    display: inline-block;
+    font-size: 30px;
+    padding: 2%;
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+}
+.NavBar i{
+    margin: 20px;
+    font-size: 35px;
+}
+
+.NavBar a:hover{
+    color:#b58d07;
+} 
+
+.NavBar.show {
+    left: 0%;
+    top: 0%;
+    visibility: show;
+    text-align: left;
+    padding-left: 40px;
+  }
+
+.NavBar.show a {
+    margin-left: 0%;
+}
+
+.NavBar.hide {
+    left: -100%;
+    visibility: hidden;
+    text-align: left;
+}
+
+.NavBar.hide a {
+    margin-left: -200%;
+}
+
+/* dropdown store */
+li a i {
+    font-size: 20px!important;
+    top:0%;
+}
+
+.Store-Dropdown:hover + .Dropdown,
+.Dropdown:hover {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+
+.Dropdown {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    transition:all 0.5s ease-in-out;
+    padding-left: 50px;
+}
+
+@media (max-width: 750px) 
+{
+    .icon{
+        display: flex;
+    }
+
+    .NavBar {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .TestUl {
+        display: none;
+    }
+}
+
+@media (min-width: 751px) 
+{
+    .NavBar {
+        display: none;
+    }
+}

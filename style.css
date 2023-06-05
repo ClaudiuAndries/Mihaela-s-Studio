@@ -1,0 +1,257 @@
+*{
+    
+    font-family: 'Josefin Sans', sans-serif;
+    color: #6f546b;
+}
+
+.container {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.container .wrapper {
+    width: 60vw;
+    height: 75vh;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    margin: 1rem auto;
+    overflow: hidden;
+    border-radius: 5%;
+}
+
+.container .wrapper-holder {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    height: 100%;
+    width: 100%;
+    animation: slider 10s ease-in-out infinite alternate;
+}
+
+.container #slider-img-1 {
+    background-image: url(FirstImage.jpeg);
+    background-size: contain ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container #slider-img-2 {
+    background-image: url(MainImage.jpeg);
+    background-position: center;
+    background-size: contain ;
+    background-repeat: no-repeat;
+}
+
+.container #slider-img-3 {
+    background-image: url(SecondImage.jpeg);
+    background-position: center;
+    background-size: contain ;
+    background-repeat: no-repeat;
+}
+
+.container .button-holder {
+    position: absolute;
+    left: 50%;
+    padding-top: 10px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container .button-holder .button {
+    background-color: #6f546b;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    z-index: 2;
+    margin: 0.5rem;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 7px 4px rgba(218, 197, 136, 0.6);
+}
+
+@keyframes slider {
+    0% {
+        transform: translateX(0%);
+    }
+    10% {
+        transform: translateX(-100%);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    30% {
+        transform: translateX(-200%);
+    } 
+}
+
+/* citat */
+.Citat-Section {
+    margin-top: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
+    position: relative;
+    flex-direction: column; 
+  }
+  .Citat-Section:nth-child(1) {
+    color: #fff;
+  }
+  .Citat-Section h1 {
+    font-size: 3rem;
+  }
+  .Citat-Section h2 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .Citat-Section .text-container {
+    display: flex;
+    margin-top: auto;
+  }
+  .Citat-Section .text-container .text-box h3 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 900px) {
+    .Citat-Section h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    .Citat-Section .text-container {
+      flex-direction: column;
+    }
+    .Info-Index {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .Citat-Section{
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+  }
+  
+  .reveal {
+    position: relative;
+    opacity: 0;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+  }
+  .active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+  }
+  .active.fade-left {
+    animation: fade-left 1s ease-in;
+  }
+  .active.fade-right {
+    animation: fade-right 1s ease-in;
+  }
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }  
+
+  .Info-Index {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+
+  .Info-Index section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .Info-Index .submit-btn{
+    position: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: black;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 120px;
+    letter-spacing: 1px;
+    height: 40px;
+}
+
+  .submit-btn  {
+    --c:  rgb(184, 124, 176);
+
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+        var(--_g) calc(var(--_p,0%) - 100%) 0%,
+        var(--_g) calc(200% - var(--_p,0%)) 0%,
+        var(--_g) calc(var(--_p,0%) - 100%) 100%,
+        var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+}
+.submit-btn:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+  }
+.submit-btn:active {
+box-shadow: 0 0 9e9q inset #0009; 
+background-color: var(--c);
+color: #fff;
+}
+
+footer {
+    /* place on the bottom */
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    background: #efeae4;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family:'Times New Roman', Times, serif;
+    text-transform: uppercase;
+  }

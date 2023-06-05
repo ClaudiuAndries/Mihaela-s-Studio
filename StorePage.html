@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mihaela's Art</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="x-icon" href="logoPng.png"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="Store/store.css">
+        <link rel="stylesheet" href="social-media.css"/>
+        <link rel="stylesheet" href="searchbuttons.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header id="header">
+        </header>
+        <div id="social"> </div>
+
+        <div class="Storage-Container">
+            <div id="Image-Container" >
+                <div id="Show-Data"></div>
+            </div> 
+        </div>
+
+        <footer id="footer">
+            <p>© Copyright 2023. All Rights Reserved</p>
+        </footer>
+        <script src="Store/store.js"></script>
+        <script>
+            window.onload = function() {
+                loadIconsFromFolder('Store/AnimalsImage');
+                loadIconsFromFolder('Store/IconsImage');
+                loadIconsFromFolder('Store/PortraitsImage');
+            };
+        </script>
+        <script src="searchbuttons.js" defer></script>
+    </body>
+</html>

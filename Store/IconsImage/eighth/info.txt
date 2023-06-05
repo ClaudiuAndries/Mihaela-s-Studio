@@ -1,0 +1,7 @@
+Titlu: TABLOU DE VANZARE
+Mediu: Ulei
+Dimensiune: 40x40
+An: 2023
+Descriere: Acesta este un tablou facut in 2023 de mainile mele pricepute, stiu sa si gatesc
+Pret: 100000Euro
+Disponibilitate: Disponibil
